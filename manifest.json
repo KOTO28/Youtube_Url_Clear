@@ -1,0 +1,22 @@
+{
+	"name": "Youtube Url Clear",
+	"manifest_version": 3,
+	"version": "1.0.0",
+	"description": "この拡張機能のボタンを押すことで、youtubeのURLをシンプルにします。",
+	"permissions": ["storage","activeTab","scripting","tabs"],
+	"action": {},
+	"icons": {
+		"16": "icon/icon_16.png",
+		"48": "icon/icon_48.png",
+		"128": "icon/icon_128.png"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.youtube.com/*"],
+			"js": ["script.js"]
+		}
+	]
+}
